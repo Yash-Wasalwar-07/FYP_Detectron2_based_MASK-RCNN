@@ -53,7 +53,7 @@ def predict_image(image):
   cfg.DATALOADER.NUM_WORKERS = 2
 #   cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
   
-  cfg.MODEL.WEIGHTS = "model_final.pth"
+  cfg.MODEL.WEIGHTS = "model_final_cpu.pth"
   
   cfg.MODEL.DEVICE = "cpu"
   cfg.SOLVER.IMS_PER_BATCH = 2
