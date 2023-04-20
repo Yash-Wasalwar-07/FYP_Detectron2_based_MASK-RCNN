@@ -1,4 +1,9 @@
 import streamlit as st
+import subprocess
+
+packages = str(subprocess.run('pip list', capture_output=True))
+st.markdown(packages.replace('\\r\\n', '  \\\n'))
+
 import torch,torchvision
 # import req
 from detectron2.utils.logger import setup_logger
